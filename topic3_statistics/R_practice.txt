@@ -1,0 +1,111 @@
+### R examples for the lectures given in the morning
+
+#############################################################
+# correlation analysis
+History=c(35, 23, 47, 17, 10, 43, 9, 6, 28)
+Algebra=c(30, 33, 45, 23, 8, 49, 12, 4, 31)
+
+# Pearson correlation
+cor(History, Algebra)
+cor.test(History,Algebra,method="pearson")
+
+# Spearman correlation
+cor(History, Algebra, method = "spearman")
+cor.test(History,Algebra,method="spearman")
+
+#############################################################
+#Chi-square test
+T=c(rep(1,38), rep(0,29), rep(1,7), rep(0,17))
+S=c(rep(1,67),rep(0,24))
+data=cbind(T,S)
+table(T,S)
+
+chisq.test(T,S)
+
+#Fisher exact test
+fisher.test(T,S)
+
+############################################################
+# Linear regression example
+
+# data example: Teen Birth Rate and Poverty Level Data
+# This dataset of size n = 51 are for the 50 states and the District of Columbia in the United States (poverty.txt). 
+# The variables are y = year 2002 birth rate per 1000 females 15 to 17 years old, and x = poverty rate, which is 
+# the percent of the state's population living in households with incomes below the federally defined poverty level. 
+# (Data source: Mind On Statistics, 3rd edition, Utts and Heckard).
+
+setwd('D:/Short course/')
+data=read.table("poverty.txt",header=TRUE, sep = "", row.names=1)
+## view the first few rows of the data
+head(data)
+#attach(data)
+y=data[,2]; x=data[,1]
+fit=lm(y~x)
+summary(fit)
+
+plot(data, pch = 16, col = "blue") #Plot the results
+abline(fit) #Add a regression line
+
+############################################################
+# Logistic regression example (data from https://stats.idre.ucla.edu/r/dae/logit-regression/)
+# Response is student admission (admit/don't admit, a binary variable), explanatory variables are GRE, GPA and Rank (prestige of the undergraduate institution).
+# The purpose is to evaluate how these variables affect admission into graduate school. 
+
+data2 <- read.csv("https://stats.idre.ucla.edu/stat/data/binary.csv")
+## view the first few rows of the data
+head(data2)
+
+# two-way contingency table of categorical outcome and predictors 
+xtabs(~admit + rank, data = data2)
+attach(data2)
+
+fit2=glm(admit~gre, family="binomial")
+summary(fit2)
+
+# Now we use the predict() function to set up the fitted values. 
+plot(gre, admit, pch = 16, xlab = "GRE", ylab = "Admission")
+x.gre <-seq (220, 800, 10)
+y.admit <- predict(fit2, list(gre=x.gre), type="response")
+lines(x.gre, y.admit, col = "red", lwd = 2)
+
+# fit a multiple logistic regression model with both gre and gpa
+fit3=glm(admit~gre+gpa,family="binomial")
+summary(fit3)
+
+# since rank is a nominal variable, we cannot treated as a continous one 
+rank.new= factor(rank) # Rank 1 is treated as the baseline comparison group which is the highest ranking group universities
+fit4=glm(admit~gre+gpa+rank.new, family="binomial")
+summary(fit4)
+
+# interpretation of the coefficients
+# For every one unit change in gre, the log odds of admission (versus non-admission) increases by 0.002, by holding other variables constant.
+# For a one unit increase in gpa, the log odds of being admitted to graduate school increases by 0.804, by holding other variables constant.
+# For rank, we have a slightly different interpretation. 
+### For example, having attended an undergraduate institution with rank of 2, versus an institution with a rank of 1, 
+### changes the log odds of admission by -0.675, by holding other variables constant.
+### So negative coefficient for lower rank university indicate the reduced chance for admission
+
+# get the odds ratio (OR) and their CI
+exp(cbind(OR = coef(fit4), confint(fit4)))
+
+############################################################
+# p-value and FRD adjustment
+# in R, use p.adjust(p, method = p.adjust.methods)
+# p.adjust.methods inlcudes  c("holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none") 
+pval=c(runif(30,0,0.1),runif(100,0,1))
+hist(pval)
+p.adjust(pval,method="BH")
+
+library(qvalue)
+qvalue(pval)
+
+############################################################
+# Survival analysis
+library(survival)
+
+leukemia.surv <- survfit(Surv(time, status) ~ x, data = aml) 
+plot(leukemia.surv, lty = 2:3) 
+legend(100, .9, c("Maintenance", "No Maintenance"), lty = 2:3) 
+title("Kaplan-Meier Curves\nfor AML Maintenance Study") 
+
+
