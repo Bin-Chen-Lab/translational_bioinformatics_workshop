@@ -1,4 +1,4 @@
-#Translational Bioinformatics in R  
+# Translational Bioinformatics in R  
 Date: Aug 10-14, 2020  
 Registration Fee: $100  
 Online: Zoom link will be available for selected attendees  
@@ -43,12 +43,12 @@ Afternoon (1pm - 3pm): lab & QA (optional)
 7. Survival analysis (KM plot, Hazard Ratio)  
 
 ## Machine learning (two sessions, Jiayu) Day 3: 9-11am
-1 Feature selection
-2. Supervised learning
-3. GLM/LASSO/Ridge/Elastic net
-4. Naive Bayes/SVM/Random Forest
-5. Deep learning
-6. XGBoost
+1. Intro to ML
+2. Perceptron and Deep Learning
+3. Tree Methods
+4. Random Forest
+5. Adaboost
+6. Gradient Boosting
 
 ## RNA-Seq (two sessions, Ke) Day 3: 11-12, Day 4: 8-9am
 1. Sequence alignment 
@@ -76,10 +76,9 @@ Afternoon (1pm - 3pm): lab & QA (optional)
 ## Q&A, feedback (Bin) Day 5: 11:00-12pm
 
 
-#Instructors & TAs
+# Instructors & TAs
 + Bin Chen  
 + Ke Liu  
-+ Rama Shankar  
 + Jing Xing  
 + Eugene Chekalin  
 + Mengying Sun  
