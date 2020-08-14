@@ -1,8 +1,5 @@
 # Translational Bioinformatics in R  
 Date: Aug 10-14, 2020  
-Registration Fee: $100  
-Online: Zoom link will be available for selected attendees  
-1 session: 45min tutorial and then 15min break  
 five-day workshop, primarily in R, occasionally in Python  
 Morning (9-12pm): tutorial (required) (Thursday starts at 8:00am)  
 Afternoon (1pm - 3pm): lab & QA (optional)  
@@ -22,16 +19,16 @@ Afternoon (1pm - 3pm): lab & QA (optional)
 + cells/organoids/animal models/patients  
 4. Public data resources  
 5. Basic R (read/write, data types)  
-6. Workshop structure  
+6. Workshop Structure  
 
 ## Data manipulation and visualization (two sessions, Eugene), Day 1: 11-12pm, Day 2: 9-10am
-1. apply (lapply, sapply, by)  
+1. Apply (lapply, sapply, by)  
 2. Collapse/Summarize data (dplyr)  
 3. PCA/TSNE/umap (Variation)  
 4. Clustering (hclust)  
 5. ggplot2 (boxplot, violin plot, scatter plot, error bar)  
-6. heatmap (annotation, clustering, ComplexHeatmap )  
-7. publication-ready figures (font, background, legend)  
+6. Heatmap (annotation, clustering, ComplexHeatmap )  
+7. Publication-ready figures (font, background, legend)  
 
 ## Basic statistical analysis (two sessions, Yuehua) Day 2: 10-12pm
 1. Correlation analysis  
@@ -69,12 +66,11 @@ Afternoon (1pm - 3pm): lab & QA (optional)
 ## Structure-based drug discovery (one session, Jing) Day 5: 9-10am
 1. Protein structure/3D structure
 2. Docking
-3. Target prediction
+3. Target fishing
 
 ## R markdown/R package/Shiny (one session, Paul) Day 5: 10-11am
 
 ## Q&A, feedback (Bin) Day 5: 11:00-12pm
-
 
 # Instructors & TAs
 + Bin Chen  
