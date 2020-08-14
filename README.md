@@ -1,28 +1,28 @@
-Translational Bioinformatics in R
-Date: Aug 10-14, 2020
-Registration Fee: $100
-Online: Zoom link will be available for selected attendees
-1 session: 45min tutorial and then 15min break
-five-day workshop, primarily in R, occasionally in Python
-Morning (9-12pm): tutorial (required) (Thursday starts at 8:00am)
-Afternoon (1pm - 3pm): lab & QA (optional)
+**Translational Bioinformatics in R** 
+Date: Aug 10-14, 2020  
+Registration Fee: $100  
+Online: Zoom link will be available for selected attendees  
+1 session: 45min tutorial and then 15min break  
+five-day workshop, primarily in R, occasionally in Python  
+Morning (9-12pm): tutorial (required) (Thursday starts at 8:00am)  
+Afternoon (1pm - 3pm): lab & QA (optional)  
 
-1. Introduction to Big Data ( two sessions, Bin), Day 1: 9-11am
-Data structure
-Matrix (data.frame, matrix)
-Network (igraph, cytoscape, stringdb, KEGG)
-Unstructured data (text, clinical note, pattern regular expression)
-      2)  Data modality
-Omics data (genomics, transcriptomics, proteomics, metabolomics)
-Screening data (CRISPR, pharmacogenomics)
-Image data (Morphology image)
-Knowledge graph (PPI)
-EMR 
-     3) Models
-cells/organoids/animal models/patients
-     4) Public data resources
-     5) Basic R (read/write, data types)
-     6) Workshop structure
+# Introduction to Big Data ( two sessions, Bin), Day 1: 9-11am  
+1. Data structure  
++ Matrix (data.frame, matrix)  
++ Network (igraph, cytoscape, stringdb, KEGG)  
++ Unstructured data (text, clinical note, pattern regular expression)  
+2. Data modality  
++ Omics data (genomics, transcriptomics, proteomics, metabolomics)  
++ Screening data (CRISPR, pharmacogenomics)  
++ Image data (Morphology image)  
++ Knowledge graph (PPI)  
++ EMR 
+3. Models
++ cells/organoids/animal models/patients  
+4. Public data resources  
+5. Basic R (read/write, data types)  
+6. Workshop structure  
 
 2. Data manipulation and visualization (two sessions, Eugene), Day 1: 11-12pm, Day 2: 9-10am
 apply (lapply, sapply, by) 
