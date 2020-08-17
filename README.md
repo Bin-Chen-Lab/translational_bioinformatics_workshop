@@ -6,7 +6,7 @@ Afternoon (1pm - 3pm): lab & QA (optional)
 
 ## Table of Contents
 
-* [Instructors & TAs](#instructors-&amp;-tas)
+* [Instructors & TAs](#instructors--tas)
 * [Sessions](#sessions)
     * [Introduction to Big Data](#introduction-to-big-data)
     * [Data manipulation and visualization](#data-manipulation-and-visualization)
@@ -16,8 +16,8 @@ Afternoon (1pm - 3pm): lab & QA (optional)
     * [Single cell RNA-Seq](#single-cell-rna-seq)
     * [From big data to drug discovery](#from-big-data-to-drug-discovery)
     * [Structure-based drug discovery](#structure-based-drug-discovery)
-    * [R markdown, R packages, R Shiny](#r-markdown,-r-packages,-r-shiny)
-    * [Q&A, feedback](#q&amp;a,-feedback)
+    * [R markdown, R packages, R Shiny](#r-markdown-r-packages-r-shiny)
+    * [Q&A, feedback](#qa-feedback)
 
 ## Instructors & TAs
 + Bin Chen
